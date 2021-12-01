@@ -68,14 +68,14 @@ int main()
 {
     setlocale(0, "");
     system("chcp 1251");
-    srand(time(0));
 
     string text;
     string obrat;
     getline(cin, text);
     cin >> obrat;
-    task1(text, obrat);
 
+    srand(time(0));
+    task1(text, obrat);
     int t = clock();
     cout << endl << "time = " << t << endl;
 }

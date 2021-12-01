@@ -134,7 +134,7 @@ int main()
 {
     setlocale(0, "");
     ifstream file;
-    srand(time(0));
+
     
     file.open("test.txt");
     if (!file.is_open()) { cout << "файл  не найден"; return 0; }
@@ -142,6 +142,8 @@ int main()
     getline(file, obrath);
     getline(file, text);
     cout << text << endl << obrath << endl;
+    
+    srand(time(0));
     list<int> out = TBM(text, obrath);
     int n = out.size();
     for (int i = 0; i < n; i++)
